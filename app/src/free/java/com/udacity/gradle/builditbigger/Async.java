@@ -43,10 +43,9 @@ class Async extends AsyncTask<Void, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
-//            Intent intent = new Intent(context, MainActivityAndroidLip.class);
-//            intent.putExtra("joke", result);
-//            context.startActivity(intent);
+        Intent intent = new Intent(context, MainActivityAndroidLip.class);
+        intent.putExtra(context.getString(R.string.joke), result);
+        context.startActivity(intent);
     }//end onPostExecute
 
 
