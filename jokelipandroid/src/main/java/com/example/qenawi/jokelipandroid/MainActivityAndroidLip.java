@@ -14,7 +14,7 @@ TextView view1;
         view1=(TextView) findViewById(R.id.textView);
         try
         {
-            view1.setText(getIntent().getExtras().getString("joke"));
+            view1.setText(getIntent().getExtras().getString(getString(R.string.joke)));
         }catch (Exception ignore){}
 
 
